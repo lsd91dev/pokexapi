@@ -1,1 +1,14 @@
 /* You can add global styles to this file, and also import other style files */
+
+
+.text-capitalize::first-letter {
+    text-transform: capitalize;
+}
+
+.animation-fadeIn {
+    animation: fadeIn 500ms;
+}
+
+.animation-fadeOut {
+    animation: fadeOut 500ms;
+}

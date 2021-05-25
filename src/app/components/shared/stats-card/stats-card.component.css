@@ -1,0 +1,15 @@
+.app-stat-text {
+    position:relative;
+    display: block;
+    padding: 1rem;
+}
+
+.app-stat-text::before {
+    position: absolute;
+    content: '';
+    height: 50%;
+    width: 3px;
+    left: -5px;
+    transform: translateY(25%);
+    background: var( --bs-orange);
+}

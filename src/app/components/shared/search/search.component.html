@@ -1,0 +1,5 @@
+<input class="form-control me-2 mt-5" type="search" placeholder="Search pokemon" aria-label="Search" (keydown.enter)="searchPokemon(inputSearch)" #inputSearch>
+
+<div class="d-grid gap-2">
+    <button class="btn app-btn mt-3" type="button" (click)="searchPokemon(inputSearch)"><b><i class="bi bi-search m-2"></i>Search</b></button>
+  </div>

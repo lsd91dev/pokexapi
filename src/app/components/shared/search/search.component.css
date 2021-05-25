@@ -1,0 +1,7 @@
+.app-btn {
+    background: var(--bs-orange);
+}
+
+.app-btn:hover {
+    background: #ff963f;
+}

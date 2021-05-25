@@ -1,0 +1,38 @@
+<app-navbar></app-navbar>
+
+    <div class="row mt-5 animation-fadeIn" *ngIf="pokemon">
+        <div class="col-md-4 col-sm-6">
+            <div class="container mb-5"> 
+                <img [src]="pokemon.sprites | artbook" [alt]="pokemon.name" class="img-thumbnail">
+                <div class="row">
+                    <div class="col text-center rounded bg-primary text-white" *ngFor="let types of pokemon.types"> <h3 class="text-capitalize"> {{ types.type | types }} </h3> </div>
+                </div>
+            </div>
+            <div class="container mt-2">
+                <app-stats-card [pokemon]="pokemon"></app-stats-card>
+            </div> 
+            <div class="container mt-2">
+                <app-basic-data [pokemon]="pokemon" [pokemon_habitat]="pokemonSpecie.habitat | habitat" [pokemon_genera]="pokemonSpecie.genera | genera"></app-basic-data>
+            </div>
+        </div>
+
+        <div class="col-md-8 col-sm-6 p-5">
+            <div class="container d-flex ms-auto">
+                <button class="btn btn-outline-primary ms-auto" routerLink=""> <i class="bi bi-house-fill"></i> <span> Home </span> </button>
+            </div>
+            <h2 class="text-entry-header"> Pokédex description </h2>
+            <p class="text-entry">
+                {{ pokemonSpecie.flavor_text_entries | pokedexEntry }} Lorem ipsum, dolor sit amet consectetur adipisicing elit. Eaque nemo rerum ratione est tempore, quos nostrum sit fugit neque qui temporibus deserunt corporis atque dolor, officiis expedita ea. Eos, consequatur.
+                Esse quae perferendis reiciendis iure dolores inventore ullam quisquam totam provident, blanditiis quas? Optio odit aut distinctio reprehenderit maiores ut odio, debitis molestias dolores est laborum voluptatum similique porro neque.
+                Dolore asperiores velit dolorem molestiae quas, temporibus nulla corporis! Nihil et quo, necessitatibus ipsum ea qui dignissimos quod fuga voluptatum alias iste enim, dolor laboriosam magni eum provident voluptates dolorem?
+                Beatae enim aut, illo quas eaque amet asperiores vitae itaque delectus numquam, deserunt quasi fuga inventore consectetur quos. Ad nam alias, sunt maiores aliquam voluptatibus! Assumenda laudantium pariatur quaerat commodi.
+                Alias consectetur dicta praesentium libero cum? Ullam laborum sequi recusandae illo distinctio aliquam odio veniam molestiae minima corrupti iste cumque placeat culpa facere consequatur, quos ducimus exercitationem atque modi voluptate.
+                Culpa, officia numquam reprehenderit voluptates accusantium deleniti animi facere consequatur. Exercitationem amet minima neque quasi nulla unde consectetur quo maiores soluta dicta blanditiis nam accusamus explicabo esse, itaque aliquam fuga!
+                Explicabo modi commodi veritatis, veniam, expedita nemo nam necessitatibus mollitia ipsam aliquam, maiores quaerat a iste hic harum voluptatum. Dignissimos voluptates aliquid dolorum quas, ullam laudantium recusandae facere? Doloribus, quos!
+                Sed vero nobis cumque fugit quibusdam? Praesentium impedit excepturi iusto eligendi quidem consequatur nam, explicabo ratione aut voluptas, sunt quisquam dicta necessitatibus perspiciatis voluptatum in vitae debitis asperiores architecto tenetur.
+                Blanditiis, dolorem eum. Laborum distinctio iure possimus aliquid deserunt maiores, enim voluptatibus cupiditate nulla cumque delectus sit veniam, illo laudantium odit veritatis at maxime. Veritatis facilis incidunt labore excepturi nobis.
+                Cum, officiis dolorum. Corrupti recusandae cum ut eos, ullam nisi numquam voluptas fuga harum, veritatis dolores aperiam quia soluta debitis expedita tempore error maiores a eius ex vero, molestiae ab!
+            </p>
+            <button class="btn btn-outline-primary" routerLink=""> <i class="bi bi-house-fill"></i> <span> Home </span> </button>
+        </div>
+    </div>
